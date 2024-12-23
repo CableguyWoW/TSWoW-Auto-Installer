@@ -5,7 +5,7 @@
 ## Feature Highlights
 
 - **Install Requirements**: Quickly installs all necessary software to run TrinityCore on Linux.
-- **Source Code Management**: Downloads the TrinityCore source code and sets up both the Auth server and World server.
+- **Source Code Management**: Downloads the TSWoW source code and sets up both the Auth server and World server.
 - **Client Data Generation**: Downloads the 3.3.5a Client and Extract DBC/Maps/VMaps/MMAPs automatically.
 - **MySQL Setup**: Automatically installs and configures MySQL, including random password generation and enabling remote access.
 - **Database Configuration**: Creates the required MySQL databases and user accounts.
