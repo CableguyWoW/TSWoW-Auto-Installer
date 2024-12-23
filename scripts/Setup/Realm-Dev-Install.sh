@@ -32,7 +32,8 @@ echo ""
 echo ""
 ((NUM++)); echo "- [$NUM] : Download 3.3.5a Client"
 ((NUM++)); echo "- [$NUM] : Setup MySQL Database & Users"
-((NUM++)); echo "- [$NUM] : Pull and Setup TSWoW"
+((NUM++)); echo "- [$NUM] : Setup TSWoW"
+((NUM++)); echo "- [$NUM] : Setup TSWoW Configs"
 echo ""
 
 else
