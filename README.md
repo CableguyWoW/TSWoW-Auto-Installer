@@ -1,5 +1,7 @@
 # TSWoW-Auto-Installer
 
+UNFINISHED AND NOT WORKING YET - DO NOT USE!
+
 **TSWoW-Auto-Installer** is tool that helps you set up **TSWoW 3.3.5a** servers on **Debian 12**. With this installer, you can quickly configure your server environment so you can focus on your custom creations.
 
 ## Feature Highlights
