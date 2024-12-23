@@ -1,6 +1,6 @@
-# WOTLKTrinityInstaller
+# TSWoW-Auto-Installer
 
-**WOTLKTrinityInstaller** is tool that helps you set up **TrinityCore 3.3.5a** servers on **Debian 12**. With this installer, you can quickly configure your server environment so you can focus on your custom creations.
+**TSWoW-Auto-Installer** is tool that helps you set up **TSWoW 3.3.5a** servers on **Debian 12**. With this installer, you can quickly configure your server environment so you can focus on your custom creations.
 
 ## Feature Highlights
 
@@ -13,12 +13,11 @@
 
 ## Installation
 
-To install **WOTLKTrinityInstaller**, run the following commands as the root user:
+To install **TSWoW-Auto-Installer**, run the following commands as the root user:
 
 ```bash
-cd / && rm -rf WOTLKTrinityInstaller && apt-get install git sudo -y && git clone https://github.com/CableguyWoW/WOTLKTrinityInstaller/ WOTLKTrinityInstaller && cd WOTLKTrinityInstaller && chmod +x Init.sh && ./Init.sh all
+cd / && rm -rf TSWoW-Auto-Installer && apt-get install git sudo -y && git clone https://github.com/CableguyWoW/TSWoW-Auto-Installer/ TSWoW-Auto-Installer && cd TSWoW-Auto-Installer && chmod +x Init.sh && ./Init.sh all
 ```
-
 
 ## Script Functions
 
@@ -38,22 +37,9 @@ The following tasks are handled by the Root user:
 - **Install Fail2Ban**: Install Fail2Ban to enhance security by blocking suspicious activity.
 - **Show Command List**: Display the available commands or functionalities of the script.
 
-### Auth Server Functions
-The following tasks pertain to the Auth server setup:
-
-- **Close Authserver**: Shut down the Auth server if it is running.
-- **Setup MySQL Database & Users**: Create databases and user accounts for the Auth server.
-- **Pull and Setup Source**: Download and configure the source code for the Auth server.
-- **Setup Authserver Config**: Configure the settings for the Auth server.
-- **Setup Restarter**: Ensure the Auth server can automatically restart if it crashes.
-- **Setup Crontab**: Schedule automated tasks using crontab for maintenance and backups.
-- **Setup Alias**: Create command aliases for easier access to commonly used commands.
-- **Start Authserver**: Launch the Auth server.
-
 ### Realm Server Functions
 The following tasks are related to the Realm server setup:
 
-- **Close Worldserver**: Shut down the World server if it is running.
 - **Setup MySQL Database & Users**: Create databases and user accounts for the Realm server.
 - **Pull and Setup Source**: Download and configure the source code for the World server.
 - **Setup Worldserver Config**: Configure the settings for the World server.
@@ -63,10 +49,5 @@ The following tasks are related to the Realm server setup:
 - **Run Map/DBC Extractor**: Extract Map and DBC files for use in the game world.
 - **Run VMap Extractor**: Extract VMap files for navigation and environment mapping.
 - **Run Mmaps Extractor**: Extract MMap files for advanced pathfinding.
-- **Setup Realmlist**: Configure the realmlist to connect game clients to the server.
-- **Setup World Restarter Scripts**: Create scripts to automatically restart the World server.
-- **Setup Misc Scripts**: Install any miscellaneous scripts required for server operations.
-- **Setup Crontab**: Schedule automated tasks using crontab for maintenance and backups.
-- **Setup Script Alias**: Create command aliases for easier access to commonly used commands.
-- **Start Worldserver**: Launch the World server.
+
 
