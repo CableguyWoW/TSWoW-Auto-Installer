@@ -54,6 +54,9 @@ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&sudo apt-get
 sudo apt remove clang clang-19 -y
 sudo apt install clang-19 -y
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 100
+echo 'export CXX=/usr/lib/llvm-19/bin/clang++' >> ~/.bashrc
+echo 'export CC=/usr/lib/llvm-19/bin/clang' >> ~/.bashrc
+source ~/.bashrc
 sudo apt install -y p7zip-full
 fi
 
