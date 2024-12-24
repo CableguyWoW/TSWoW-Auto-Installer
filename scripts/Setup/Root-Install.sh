@@ -52,7 +52,7 @@ sudo apt install -y libboost-dev libboost-atomic-dev libboost-chrono-dev libboos
 sudo apt install -y libmariadb-dev-compat libmariadb-dev libpq-dev libpqtypes-dev postgresql-server-dev-all libsqlite3-dev
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&sudo apt-get install -y nodejs
 sudo apt remove clang clang-19 -y
-sudo apt install nodejs npm clang-19 -y
+sudo apt install clang-19 -y
 sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 100
 sudo apt install -y p7zip-full
 fi
