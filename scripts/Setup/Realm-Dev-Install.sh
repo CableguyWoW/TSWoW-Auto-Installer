@@ -211,8 +211,10 @@ if [[ "$TS_REPO_URL" == *.zip ]]; then
         mv "/home/$SETUP_REALM_USER/$FOLDERNAME-$FILENAME_NO_ZIP" /home/$SETUP_REALM_USER/$FOLDERNAME
     fi
 else
-    git clone "$TS_REPO_URL"
-    mv "/home/$SETUP_REALM_USER/TSWoW" /home/$SETUP_REALM_USER/$FOLDERNAME
+    cd /home/$SETUP_REALM_USER/
+    git clone $TS_REPO_URL tswow
+    cd tswow/
+    git submodule update --init
 fi
 fi
 
@@ -224,18 +226,10 @@ echo "##########################################################"
 echo "## $NUM.Setup TSWoW"
 echo "##########################################################"
 echo ""
-echo "Install NPM"
-sudo apt remove clang clang-19 -y
-sudo apt install nodejs npm clang-19 -y
-sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 100
-echo "Running NPM install"
-cd /home/$SETUP_REALM_USER/tswow/
-npm i
-echo "Running NPM setup"
-npm run build
-echo "Building full setup"
-build full
-mv build.default.conf build.conf
+echo "Running TSWoW Setup"
+npm install
+cp build.default.conf build.conf
+npm run-script build trinitycore-relwithdebinfo
 fi
 
 

@@ -23,7 +23,7 @@ echo ""
 echo "- [all] : Run Full Script"
 echo ""
 ((NUM++)); echo "- [$NUM] : Randomize Passwords"
-((NUM++)); echo "- [$NUM] : Install Requirements"
+((NUM++)); echo "- [$NUM] : Install TSWoW Requirements"
 ((NUM++)); echo "- [$NUM] : Install and Setup MySQL"
 ((NUM++)); echo "- [$NUM] : Create Remote MySQL user"
 ((NUM++)); echo "- [$NUM] : Setup Firewall"
@@ -41,15 +41,20 @@ else
 if [ "$1" = "all" ] || [ "$1" = "$NUM" ]; then
 echo ""
 echo "##########################################################"
-echo "## $NUM.Installing Requirements"
+echo "## $NUM.Installing TSWoW Requirements"
 echo "##########################################################"
 echo ""
 sudo apt update -y
-#TrinityCore Dependencies
-sudo apt-get install git unzip screen clang cmake make gdb gcc g++ libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev p7zip --assume-yes
-# This gets updated to clang 19 later
-update-alternatives --install /usr/bin/cc cc /usr/bin/clang 100
-update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang 100
+sudo apt install -y gcc g++ make cmake cmake-format clang clang-format clang-tidy libtool make meson ninja-build pkg-config
+sudo apt install -y python3-dev
+sudo apt install -y libbz2-dev libglu1-mesa-dev liblua5.3-dev libncurses-dev libomp-dev libreadline-dev libsdl2-dev libssl-dev zlib1g-dev
+sudo apt install -y libboost-dev libboost-atomic-dev libboost-chrono-dev libboost-date-time-dev libboost-filesystem-dev libboost-iostreams-dev libboost-locale-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev libboost-test-dev
+sudo apt install -y libmariadb-dev-compat libmariadb-dev libpq-dev libpqtypes-dev postgresql-server-dev-all libsqlite3-dev
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&sudo apt-get install -y nodejs
+sudo apt remove clang clang-19 -y
+sudo apt install nodejs npm clang-19 -y
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-19 100
+sudo apt install -y p7zip-full
 fi
 
 
